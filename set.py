@@ -18,7 +18,7 @@ class Set:
 
 
     def compute_third(self, card1, card2):
-        card3 = Card()
+        card3 = Card("default", "default", "default", "default")
         if card1.color == card2.color:
             card3.color = card1.color
         else:
@@ -38,5 +38,5 @@ class Set:
             card3.texture = card1.texture
         else:
             card3.texture = Features.computeTexture(card1.texture, card2.texture)
-
+        return card3
 
